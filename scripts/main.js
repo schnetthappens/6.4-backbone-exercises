@@ -6,6 +6,5 @@ import IndexView from 'a/views/index';
   $(document).ready(function(){
     var indexView = new IndexView();
     $('.content').prepend(indexView.el);
-    // console.log('test');
   });
 })();
