@@ -22,7 +22,7 @@ export default Backbone.View.extend ({
     var title = this.$('.post-title').val();
     var body = this.$('.post-content').val();
     this.model.set({title: title, body: body});
-    console.log(this.model.get('title'));
-
+    this.model.save();
+    this.render();
   }
 });
