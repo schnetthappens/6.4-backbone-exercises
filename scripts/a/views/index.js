@@ -17,7 +17,8 @@ export default Backbone.View.extend ({
     return this;
   },
 
-  addPost: function(){
+  addPost: function(e){
+    e.preventDefault();
     console.log('Hi');
   }
 
