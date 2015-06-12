@@ -19,3 +19,14 @@ body {
   background-color: $base-background-color;
   color: $base-font-color;
 }
+
+.form-container {
+  @include outer-container(1080px);
+}
+
+.post-title,
+.post-content,
+.submit-post {
+  display: block;
+  margin-top: 1em;
+}
