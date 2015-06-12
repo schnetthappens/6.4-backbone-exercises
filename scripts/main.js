@@ -1,9 +1,11 @@
-// import PostView from './view/index';
+import IndexView from 'a/views/index';
 
 (function(){
   'use strict';
 
   $(document).ready(function(){
-    $('.content').prepend(JST.index());
+    var indexView = new IndexView();
+    $('.content').prepend(indexView.el);
+    // console.log('test');
   });
 })();
