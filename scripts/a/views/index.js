@@ -19,7 +19,10 @@ export default Backbone.View.extend ({
 
   addPost: function(e){
     e.preventDefault();
-    console.log('Hi');
-  }
+    var title = this.$('.post-title').val();
+    var body = this.$('.post-content').val();
+    this.model.set({title: title, body: body});
+    console.log(this.model.get('title'));
 
+  }
 });
