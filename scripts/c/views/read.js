@@ -1,22 +1,12 @@
 
 export default Backbone.View.extend ({
+    template: JST.c.post,
 
-  tagName:
-  className:
+    initialize: function(){
+      this.render();
+    },
 
-  events: {
-
-  },
-
-  initialize: function(){
-
-
-  },
-
-  render: function(){
-
-
-  }
-
-
-});
+    render: function(){
+      this.$el.html(this.template());
+    }
+  });
