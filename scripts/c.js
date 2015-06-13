@@ -2,7 +2,7 @@
   'use strict';
 
   $(document).ready(function(){
-    backbone.history.start();
+    Backbone.history.start();
     $('.content').prepend(JST.c.index());
     $('.content').prepend(JST.c.post());
   });
