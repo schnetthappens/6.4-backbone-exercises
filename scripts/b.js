@@ -1,7 +1,10 @@
+import IndexView from 'b/views/index';
+
 (function(){
   'use strict';
 
   $(document).ready(function(){
-    $('.content').prepend(JST.b.index());
+    var indexView = new IndexView();
+    $('.content').prepend(indexView.el);
   });
 })();

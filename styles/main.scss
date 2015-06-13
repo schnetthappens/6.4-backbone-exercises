@@ -20,13 +20,19 @@ body {
   color: $base-font-color;
 }
 
-.form-container {
+.form-container,
+.form-container-b {
   @include outer-container(1080px);
 }
 
 .post-title,
 .post-content,
-.submit-post {
+.submit-post,
+.first-name,
+.last-name,
+.address,
+.phone-number,
+.submit {
   display: block;
   margin-top: 1em;
 }
