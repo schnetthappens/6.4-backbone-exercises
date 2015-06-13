@@ -1,15 +1,13 @@
 
 <aside class="post-list-container">
-<ul class="post-list">
+  <ul class="post-list">
 
-  {{#each this}}
-    <li class="post">
-      <h3>{{title}}</h3>
-      <p>{{created_at}}</p>
-    </li>
-  {{/each}}
+    {{#each this}}
+      <li class="post">
+        <h3 class="post-title"><a href="#">{{title}}</a></h3>
+        <p class="post-body">{{created_at}}</p>
+      </li>
+    {{/each}}
 
-</ul>
-
-
+  </ul>
 </aside>

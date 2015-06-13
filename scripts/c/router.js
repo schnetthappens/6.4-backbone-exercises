@@ -1,6 +1,6 @@
 import {PostCollection} from './models/post';
 import IndexView from './views/index';
-// import postView from './views/post';
+
 
 var Router = Backbone.Router.extend ({
 
@@ -9,17 +9,19 @@ var Router = Backbone.Router.extend ({
   },
 
   initialize: function() {
-  this.posts = new PostCollection();
-  this.posts.fetch();
-  console.log(this.posts);
+      this.posts = new PostCollection();
 
-  this.indexView = new IndexView({collection: this.posts});
-  $('.content').prepend(this.indexView.el);
+      //Gets post and creates a new with the collection passed to it
+      this.posts.fetch().then(function(){
+          this.indexView = new IndexView({collection: this.posts});
+            $('.content').append(this.indexView.el);
+            //use bind in order to access promise that's returned from fetch
+      }.bind(this));
 
   },
 
   index: function(){
-    console.log('hi');
+    // console.log('hi');
   }
 
 

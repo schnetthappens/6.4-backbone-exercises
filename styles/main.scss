@@ -56,8 +56,23 @@ body {
 
 .post-list-container,
 .post-container {
-  height: 300px;
-  background-color: $medium-gray;
+  height: auto;
+  background-color: #fff;;
   margin-top: 100px;
-
+  border: 2px solid $medium-gray
 }
+
+  .post-list {
+    padding-left: 0;
+  }
+
+    .post {
+      list-style: none;
+      margin: 2em 2em;
+      border-bottom: 1px solid $medium-gray;
+    }
+
+      .post-title a {
+        text-decoration: none;
+        color: $dark-gray;
+      }
