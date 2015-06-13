@@ -1,3 +1,5 @@
+// import Router from '../scripts/c';
+
 (function(){
   'use strict';
 
