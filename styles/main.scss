@@ -20,6 +20,8 @@ body {
   color: $base-font-color;
 }
 
+/*EXERCISES A & B*/
+
 .form-container,
 .form-container-b {
   @include outer-container(1080px);
@@ -35,4 +37,27 @@ body {
 .submit {
   display: block;
   margin-top: 1em;
+}
+
+
+/*EXERCISE C*/
+
+.content {
+  @include outer-container(1080px);
+}
+
+.post-list {
+  @include span-columns(4);
+}
+
+.post-container {
+  @include span-columns(8);
+}
+
+.post-list,
+.post-container {
+  height: 300px;
+  background-color: $medium-gray;
+  margin-top: 100px;
+
 }
