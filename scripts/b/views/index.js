@@ -18,6 +18,12 @@ export default Backbone.View.extend ({
 
   addPost: function(e){
     e.preventDefault();
-    console.log('hello');
+    var first = this.$('.first-name').val();
+    var last = this.$('.last-name').val();
+    var address = this.$('.address').val();
+    var phone = this.$('.phone-number').val();
+    this.model.set({first: first, last: last, address: address, phone: phone});
+    this.model.save();
+    this.render();
   }
 });
