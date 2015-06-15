@@ -4,6 +4,8 @@
   'use strict';
 
   $(document).ready(function(){
-    // Backbone.history.start();
+    $('.content').append(JST.d.links());
+    $('.content').append(JST.d.tags());
+    $('.content').append(JST.d.form());
   });
 })();
