@@ -1,29 +1,45 @@
+
 import {PostCollection} from './models/post';
 import IndexView from './views/index';
+import ShowView from './views/read';
 
 
 var Router = Backbone.Router.extend ({
 
   routes: {
-    '': 'index'
+    '': 'index',
+    ':id': 'show'
   },
 
   initialize: function() {
       this.posts = new PostCollection();
+      this.fetchPostsPromise = this.posts.fetch();
 
-      //Gets post and creates a new with the collection passed to it
-      this.posts.fetch().then(function(){
-          this.indexView = new IndexView({collection: this.posts});
-            $('.content').append(this.indexView.el);
-            //use bind in order to access promise that's returned from fetch
-      }.bind(this));
-
+      this.indexView = new IndexView({collection: this.posts});
+        $('.content').append(this.indexView.el);
   },
 
   index: function(){
-    // console.log('hi');
-  }
+  },
 
+  show: function(id){
+    this.fetchPostsPromise.then(function(){
+      var post = this.posts.get(id);
+      // console.log(post);
+      this.showView(new ShowView({model: post}));
+    }.bind(this));
+  },
+
+
+
+//Helper functions
+
+  showView: function(view) {
+    if(this.currentView) this.currentView.remove();
+    this.currentView = view;
+    $('.content').append(view.el);
+    return view;
+  }
 
 });
 

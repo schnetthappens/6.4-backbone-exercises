@@ -1,4 +1,6 @@
+
 var Post = Backbone.Model.extend({
+
   defaults: function(){
     return {
       created_at: '',
@@ -9,7 +11,8 @@ var Post = Backbone.Model.extend({
   },
 
   idAttribute: '_id'
-  
+
+
 });
 
 var PostCollection = Backbone.Collection.extend({
