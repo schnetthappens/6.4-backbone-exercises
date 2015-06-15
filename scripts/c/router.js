@@ -15,6 +15,7 @@ var Router = Backbone.Router.extend ({
       this.posts = new PostCollection();
       this.fetchPostsPromise = this.posts.fetch();
 
+      //creates new IndexView
       this.indexView = new IndexView({collection: this.posts});
         $('.content').append(this.indexView.el);
   },
