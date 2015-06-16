@@ -1,11 +1,9 @@
-// import Router from './c/router';
+import router from './d/router';
 
 (function(){
   'use strict';
 
   $(document).ready(function(){
-    $('.content').append(JST.d.links());
-    $('.content').append(JST.d.tags());
-    $('.content').append(JST.d.form());
+    Backbone.history.start();
   });
 })();
