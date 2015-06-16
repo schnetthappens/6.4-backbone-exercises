@@ -1,4 +1,5 @@
 
+import {Link, LinkCollection} from './models/link';
 import ShowTagListView from './views/showTagList';
 import ShowLinkListView from './views/showLinkList';
 import SubmitLinkView from './views/submitLink';
