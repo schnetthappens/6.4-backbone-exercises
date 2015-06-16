@@ -1,4 +1,8 @@
 
+import ShowTagListView from './views/showTagList';
+import ShowLinkListView from './views/showLinkList';
+import SubmitLinkView from './views/submitLink';
+
 var Router = Backbone.Router.extend({
 
   routes: {
@@ -6,9 +10,14 @@ var Router = Backbone.Router.extend({
   },
 
   initialize: function() {
-    $('.content').append(JST.d.links());
-    $('.content').append(JST.d.tags());
-    $('.content').append(JST.d.form());
+    this.submitLinkView = new SubmitLinkView();
+    $('.content').append(this.submitLinkView.el);
+
+    this.showLinkList = new ShowLinkListView();
+    $('.content').append(this.showLinkList.el);
+
+    this.showTagList = new ShowTagListView();
+    $('.content').append(this.showTagList.el);
 
   },
 

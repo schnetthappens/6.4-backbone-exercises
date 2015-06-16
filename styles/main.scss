@@ -90,7 +90,7 @@ body {
   }
 
   .link-list,
-  .tag-list {
+  .tags-list {
     @include span-columns(5.5);
     @include omega;
     height: 300px;
@@ -100,6 +100,17 @@ body {
     margin-top: 5em;
   }
 
-  .link-list {
+  .tags-list {
     margin-right: 1em;
   }
+
+  .link-form {
+    @include span-columns(12);
+    margin-top: 3em;
+  }
+
+    .link-form input,
+    .link-form button {
+      height: 40px;
+      margin-right: 2em;
+    }
